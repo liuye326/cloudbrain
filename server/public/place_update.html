@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body onload="onload()">
+  <p>部门编号<span id="sp1"></span></p>
+  <input type="text" id="pname" placeholder="部门名称"><br>
+	<button onclick="update()">提交更改</button>
+	<script>
+		function onload(){
+			var urlParams = new URLSearchParams(location.search);
+			var $pid = urlParams.get("pid");
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					var arr = JSON.parse(result);
+					sp1.innerHTML = arr.pid;
+					pname.value = arr.pname;
+				}
+			}
+			xhr.open("get","/place/list_search?pid="+$pid,true);
+			xhr.send(null);
+		}
+		function update(){
+			var $pid = sp1.innerHTML;
+			var $pname = pname.value;
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				console.log(00);
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					if(result == 1){
+						alert("修改成功");
+						location.href="/place_list.html";
+					}else{
+						alert("修改失败");
+					}
+				}
+			}
+			xhr.open("get","/place/update?pid="+$pid+"&pname="+$pname,true);
+			xhr.send(null);
+		}
+	</script>
+ </body>
+</html>
