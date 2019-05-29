@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		#main{
+			width:370px;
+			margin: 140px auto;
+			box-sizing:border-box;
+		}
+		#sp1,#sp2{
+			float:left;
+			height:45px;width:30%;
+			font : normal 25px Helvetica, Arial, sans-serif;
+			text-align:center;
+		}
+		#h1{
+			float:left;
+			height:45px;width:40%;
+			font : normal 25px Helvetica, Arial, sans-serif;
+			text-align:center;
+		}
+		#text>div{
+			clear:both;
+		}	
+		#inp_name,#inp_pwd{
+			height:45px;width:100%;
+			box-sizing:border-box;
+			margin:0 auto;
+		}
+		#main .input{
+			height:34px;width:324px;
+			box-sizing:border-box;
+			outline:0;border:0;
+			padding:8px 20px;
+			border:1px solid rgb(200,200,200);
+			border-radius:5%;
+		}
+		#bt_in{
+			height:40px;width:100%;
+			box-sizing:border-box;
+			margin-top:20px;
+		}
+		#bt_in input{
+			height:40px;width:200px;
+			border:1px solid #ccc;
+			background:linear-gradient(to bottom,#999,#aaa);
+			margin:0 85px;
+			border-radius:4%;
+		}
+	</style>
+ </head>
+ <body>
+	<div id="main">
+		<div id="text">
+			<span id="sp1">————</span>
+			<h1 id="h1">管理员登录</h1>
+			<span id="sp2">————</span>
+			<div></div>
+		</div>
+		<div id="inp_name">
+			<input type="text" id="aname" placeholder="管理员登录名" class="input">
+		</div>
+		<div id="inp_pwd">
+			<input type="text" id="apwd" placeholder="管理员登录密码" class="input">
+		</div>
+		<div id="bt_in">
+			<input type="button" value="登录">
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>CloudBrain 云脑科技</title>
+	<style>
+		*{
+			margin:0;padding:0;box-sizing:border-box;
+		}
+		.navi_all{
+			width:100%;height:80px;
+			height:80px;
+			background:rgba(64,79,92,0.4);
+			margin:0 auto;
+			position:fixed;
+			top:0px;
+		}
+		.navi_list{
+			width:90%;
+			margin:0 auto;
+			list-style:none;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+			align-items:center;
+			line-height:80px;
+		}
+		.logo{
+			width:232px;height:33px;
+			display:block;
+			background:url(img/logo.png) no-repeat 50% 50%;
+			margin:0 200px 0 100px;
+		}
+		a{
+			color:#fff;
+			text-decoration:none;
+			font-size:12px;
+		}
+		.background{
+			height:600px;
+			background:url(img/inner-banner.jpg);
+		}
+		.background::before{
+			content:"";
+			display:table;
+		}
+		.background .cover-text{
+			margin-top:230px;
+			position:relative;
+			animation:cover-text 2s linear;
+			animation-fill-mode:both;
+		}
+		#t1{
+			color:#fff;
+			font-size:72px;
+			text-align:center;
+			transform:translate(-50%);
+		}
+		#t2{
+			color:#fff;
+			font-size:43px;
+			text-align:center;
+			transform:translate(-50%);
+		}
+		@keyframes cover-text{
+			0%{transform:translate(0,0);}
+			100%{
+/*				left:50%;	*/
+				transform:translate(50%,0);
+			}
+		} 
+		.technology{
+			height:730px;
+			background:rgb(238,241,244);
+		}
+		.technology>div:first-child,.parter>div:first-child{
+			padding-top:85px;
+			display:flex;
+			flex-flow:column nowrap;
+			align-items:center;
+
+		}
+		.technology>div:first-child>p,.parter>div:first-child>p{
+			font-size:31px;
+			color:rgb(34,34,34);
+			font-weight:bolder;
+		}
+		.technology>div:first-child>img,.parter>div:first-child>img{
+			display:block;
+			width:80px;height:15px;
+			margin-top:20px;
+		}
+		.technology>div:nth-child(2){
+			width:80%;
+			margin:0 auto;
+			margin-top:20px;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+		}
+		.technology>div:nth-child(2)>div{
+			width:265px;height:480px;
+			border:1px solid rgb(238,230,233);
+			background:url(img/e-v-2.png) no-repeat 50% 18px;
+			background-size:53px 53px;
+			padding:0 20px 0 20px;
+			box-shadow:0 1px 3px rgba(0,0,0,0.12);
+			transition:500ms;
+		}
+		.technology>div:nth-child(2)>div:hover{
+			transform:scale(1.1);
+			box-shadow:1px 2px 3px rgb(0,0,0,0.5);
+		}
+		.technology>div:nth-child(2)>div>p{
+			font-size:12px;
+			color:rgb(153,153,153);
+			line-height:30px;
+			margin:auto;
+		}
+		.technology>div:nth-child(2)>div>p:first-child{
+			font-size:18px;
+			font-weight:bolder;
+			color:rgb(34,34,34);
+			padding-bottom:25px;
+			text-align:center;
+			padding-top:83px;
+		}
+		.parter{
+			height:600px;
+			background:#fff;
+		}
+		.parter>div:nth-child(2){
+			width:87%;
+			margin:60px auto 0;
+		}
+		.parter>div:nth-child(2)::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		.parter>div:nth-child(2)>a{
+			width:180px;height:72px;
+			display:block;
+			background:url(img/p1.jpg) no-repeat 50% 50%;
+			background-size:100%;
+			margin-right:60px;
+			float:left;
+			margin-left:35.5px;
+			margin-bottom:40px;
+			transition:500ms;
+		}
+		.parter>div:nth-child(2)>a:hover{
+			transform:scale(1.1);
+		}
+		.parter>div>a:first-child{
+			background-image:url(img/p2.jpg);
+		}
+		.parter>div>a:nth-child(2){
+			background-image:url(img/p17.jpg);
+		}
+		.parter>div>a:nth-child(4){
+			background-image:url(img/p13.jpg);
+		}
+		.parter>div>a:nth-child(5){
+			background-image:url(img/p14.jpg);
+		}
+		.parter>div>a:nth-child(6){
+			background-image:url(img/p18.jpg);
+		}
+		.parter>div>a:nth-child(7){
+			background-image:url(img/p9.jpg);
+		}
+		.parter>div>a:nth-child(8){
+			background-image:url(img/p16.jpg);
+		}
+		.parter>div>a:nth-child(9){
+			background-image:url(img/p15.jpg);
+		}
+		.parter>div>a:nth-child(10){
+			background-image:url(img/p7.jpg);
+		}
+		.parter>div>a:nth-child(11){
+			background-image:url(img/p11.jpg);
+		}
+		.parter>div>a:nth-child(12){
+			background-image:url(img/p19.jpg);
+		}
+		.parter>div>a:last-child{
+			background:#fff;
+		}
+		.parter>div>a:last-child>p{
+			color:rgb(194,235,235);
+			font-size:20px;
+			line-height:72px;
+			text-align:center;
+		}
+		.footer{
+			height:370px;
+			background:rgb(36,57,76);
+		}
+		.upper{
+			width:1400px;
+			margin: auto;
+			font-size:14px;
+			color:#83929f;
+			line-height:30px;
+		}
+		.upper::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		.call_us{
+			margin-top:10px;
+			width:30%;
+			float:left;
+		}
+		.call_us>p:first-child,.place>p:first-child,.email>div>p:first-child{
+			color:#fff;
+			font-size:18px;
+			font-weight:bolder;
+			line-height:60px;
+		}
+		.place{
+			margin-top:10px;
+			width:40%;
+			float:left;
+			padding-left:25px;
+			border-left:1px solid #888;
+		}
+		.email{
+			margin-top:10px;
+			width:28%;
+			float:left;
+			padding-left:25px;
+			border-left:1px solid #888;
+			padding-bottom:10px;
+		}
+		.email::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		.email>div{
+			float:left;
+			margin-right:80px;
+		}
+		.email>div:after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+		.email a{
+			text-decoration:none;
+			color:rgb(29,132,207);
+		}
+		.email p:nth-child(2){
+			display:block;
+			background:url(img/mail.png) no-repeat 0 50%;
+			padding-left:30px;
+		}
+		.lower{
+			width:80%;
+			border-top:1px solid #888;
+			margin:10px auto 0;
+			padding-top:10px;
+			font-size:12px;
+			color:#83929f;
+			line-height:30px;
+			text-align:center;
+		}
+		.lower>div>a{
+			font-size:12px;
+			color:#83929f;
+			line-height:30px;
+			text-align:center;
+		}
+		.lower>div>a:nth-child(2){
+			background:url(img/ghs.png) no-repeat 0 50%;
+			background-size:20px 20px;
+			padding-left:20px;
+			margin-left:20px;
+		}
+	</style>
+ </head>
+ <body>
+	<div class="navi_all">
+			<ul class="navi_list">
+				<li><a href="#" class="logo"></a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">行业中间件</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">技术专栏</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">中美AI青年计划</a></li>
+			</ul>
+	</div>
+	<div class="background">
+		<div class="cover-text">
+			<p id="t1">云脑科技</p>
+			<p id="t2">打造行业与人工智能之间的桥梁</p>
+		</div>
+	</div>	
+	<div class="technology">
+		<div>
+			<p>核心技术</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div>
+			<div>
+				<p>深度学习</p>
+				<p>特征自动学习，执行效率更高，预测效果更好；</p>
+				<p>充分利用海量的异构数据，抓住大数据的更多细节，从中学习有价值的关联；</p>
+				<p>研发Deepro™平台内置多种独创高效深度学习算法，高性能、高吞吐量、具有自学习能力，可基于实时增量数据和预测结果反馈。</p>
+				<p>可广泛适应于多种不同类型的业务领域，包括精准营销、异常监测、预测调度在内的典型应用场景。</p>
+			</div>
+			<div>
+				<p>增强学习</p>
+				<p>无需人工标注，自动生成训练集，可持续学习；</p>
+				<p>根据环境Reward反馈，针对特定资源，自动学习利益最大化的行为。</p>
+				<p>研发Deepro™平台内置多种独创高效深度学习算法，高性能、高吞吐量、具有自学习能力，可基于实时增量数据和预测结果反馈。</p>
+				<p>当前已应用于金融、能源行业，可实践于决策判断、能源交易等典型应用场景。</p>
+			</div>
+			<div>
+				<p>知识图谱</p>
+				<p>自动抽象多度实体关系，高效实现搜索推理。</p>
+				<p>当前已应用于金融、能源、人力资源行业，可实践于包括反欺诈、异常分析、技能图谱、适应性学习等在内的典型应用场景。</p>
+			</div>
+			<div>
+				<p>自然语言处理</p>
+				<p>对于文本、语音等非结构化海量数据语义识别；</p>
+				<p>实现未标注数据的端到端、半监督学习。</p>
+				<p>当前已应用于金融、能源、人力资源行业，可实践于包括文本匹配、搜索推荐、智能客服等在内的典型应用场景。</p>
+			</div>
+		</div>
+	</div>
+	<div class="parter">
+		<div>
+			<p>合作伙伴</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#">
+				<p>+期待您的合作</p>
+			</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="upper">
+			<div class="call_us">
+				<p>联系我们</p>
+				<p>CloudBrain USA Inc.</p>
+				<p>杭州云脑科技有限公司</p>
+			</div>
+			<div class="place">
+				<p>办公地址</p>
+				<p>硅谷：1172 Castro St. Mountain View, CA 94040, USA</p>
+				<p>中国：杭州市滨江区滨安路1180号2幢2层2222室</p>
+				<p>　　  &nbsp&nbsp北京市朝阳区东外56号文创园C座2层</p>
+			</div>
+			<div class="email">
+				<div>
+					<p>商务合作</p>
+					<p>联系邮箱</p>
+					<a href="#">bd@cloudbrain.ai</a>
+				</div>
+				<div>
+					<p>商务合作</p>
+					<p>联系邮箱</p>
+					<a href="#">bd@cloudbrain.ai</a>
+				</div>
+				<div>
+					<p>商务合作</p>
+					<p>联系邮箱</p>
+					<a href="#">bd@cloudbrain.ai</a>
+				</div>
+			</div>
+		</div>
+		<div class="lower">
+			<p>© CloudBrain USA Inc. 云脑科技</p>
+			<div>
+				<a herf="#">浙ICP备17054254号</a>
+				<a herf="#">浙公网安备 33010802008687号</a>		
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>CloudBrain 云脑科技</title>
+	<style>
+		*{
+			margin:0;padding:0;box-sizing:border-box;
+		}
+
+		/*导航栏*/
+		.navi_all{
+			width:100%;height:80px;
+			height:80px;
+			background:rgba(64,79,92,0.4);
+			margin:0 auto;
+			position:fixed;
+			top:0px;
+		}
+		.navi_list{
+			width:90%;
+			margin:0 auto;
+			list-style:none;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+			align-items:center;
+			line-height:80px;
+		}
+		.logo{
+			width:232px;height:33px;
+			display:block;
+			background:url(img/logo.png) no-repeat 50% 50%;
+			margin:0 200px 0 100px;
+		}
+		a{
+			color:#fff;
+			text-decoration:none;
+			font-size:12px;
+		}
+		/*背景区域*/
+		.background{
+			height:500px;
+			background:url(img/inner-banner.jpg);
+		}
+		.background::before{
+			content:"";
+			display:table;
+		}
+		.background .cover-text{
+			width:75%;
+			margin:230px auto 0;
+		}
+		#t1{
+			color:#fff;
+			font-size:34px;
+		}
+		/*技术介绍*/
+		.technology{
+			background:url(img/logo-title.png) no-repeat 50% 18%;
+		}
+		.technology>div:first-child,.problems>div:first-child,.superiority>div:first-child,.value>div:first-child,.scheme>div:first-child{
+			padding-top:160px;
+			display:flex;
+			flex-flow:column nowrap;
+			align-items:center;
+		}
+		.technology>div:first-child>p,.problems>div:first-child>p,.superiority>div:first-child>p,.value>div:first-child>p,.scheme>div:first-child>p{
+			font-size:31px;
+			color:rgb(34,34,34);
+			font-weight:bolder;
+		}
+		.technology>div:first-child>img,.problems>div:first-child>img,.superiority>div:first-child>img,.value>div:first-child>img,.scheme>div:first-child>img{
+			display:block;
+			width:80px;height:15px;
+			margin-top:20px;
+		}
+		.technology>div:nth-child(2){
+			width:55%;
+			margin:50px auto 0;
+		}
+		.content>p:first-child{
+			text-align:center;
+			font-size:22px;
+			font-weight:bolder;
+		}
+		.content>p:nth-child(2){
+			padding-top:26px;
+			text-align:center;
+			font-size:14px;
+			line-height:30px;
+			color:gray;
+			padding-bottom:140px;
+		}
+		/*解决的问题*/
+		.problems{
+			background:rgb(238,241,244);
+		}
+		.problems>div:first-child{
+			padding-top:84px;
+		}
+		.content_problems{
+			width:50%;
+			margin:0 auto 0;
+			padding:25px 0 84px;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+		}
+		.content_problems>div{
+			width:360px;height:300px;
+			box-shadow:0 1px 2px rgba(0,0,0,0.3);
+			background:#fff url
+			padding:20px;
+			padding-left:35px;
+			padding-right:35px;
+			position:relative;
+			transition:500ms;
+		}
+		.content_problems>div:hover{
+			transform:scale(1.1);
+			box-shadow:1px 2px 3px rgba(0,0,0,0.5);
+		}
+		.content_problems>div>p:first-child{
+			margin-top:74px;
+			font-size:25px;
+			font-weight:bolder;
+			text-align:center;
+			
+		}
+		.content_problems>div>p:nth-child(2){
+			padding-top:24px;
+			line-height:32px;
+			text-align:center;
+			font-size:14px;
+			color:gray;
+		}
+		.content_problems>div>p:nth-child(3){
+			height:33px;
+			position:absolute;
+			top:258px;left:50%;
+			font-size:14px;
+			line-height:33px;
+			color:rgb(16,143,207);
+			transform:translateX(-50%);
+			display:block;
+			background:url(img/solve.png) no-repeat 0 50%;
+			background-size:30px 30px;
+			padding-left:30px;
+		}
+		/*我们的优势*/
+		.superiority>div:first-child{
+			padding-top:84px;
+		}
+		.content_sup{
+			width:70%;
+			margin:0 auto 0;
+			position:relative;
+			margin-bottom:520px;
+		}
+		.content_sup>img{
+			position:absolute;
+			top:20px;left:185px;
+		}
+		.content_sup>div{
+			position:absolute;
+			top:40px;right:205px;
+			font-size:15px;
+			color:gray;
+			line-height:35px;
+		}
+		.content_sup>div>p{
+			width:420px;
+			display:block;
+			background:url()
+		}
+		.content_sup>div>div{
+			display:inline-block;
+			width:12px;height:12px;
+			border-radius:50%;
+			background:rgb(16,143,207);
+			transform:translate(-30px,35px);
+		}
+		/*我们的优势*/
+		.value{
+			background:rgb(238,241,244);
+		}
+		.value>div:first-child{
+			padding-top:90px;
+		}
+		.content_value{
+			width:80%;
+			margin:65px auto 0;
+			display:flex;
+			flex-flow:row wrap;
+			justify-content:space-around;
+		}
+		.content_value>div{
+			width:360px;height:200px;
+			box-shadow:0 1px 2px rgba(0,0,0,0.3);
+			padding:20px;
+			transition:500ms;
+			margin-bottom:90px;
+		}
+		.content_value>div:hover{
+			transform:scale(1.1);
+			box-shadow:0 1px 2px rgba(0,0,0,0.5);
+		}
+		.content_value img{
+			display:block;
+			margin:-73px auto 0px;
+		}
+		.content_value p{
+			font-size:14px;
+			color:gray;
+			text-align:center;
+			line-height:32px;
+			margin-top:20px;
+			margin-bottom:150px;
+		}
+		.before,.after{
+			width:65%;
+			margin:45px auto 0; 
+		}
+		.title{
+			display:flex;
+			flex-flow:row nowrap;
+		}
+		.title div{
+			width:8px;height:20px;
+			background:rgb(16,143,207);
+			margin-right:10px;
+		}
+		.title p{
+			font-size:22px;
+			color:rgb(34,34,34);
+			font-weight:bolder;
+		}
+	</style>
+ </head>
+ <body>
+  <div class="navi_all">
+			<ul class="navi_list">
+				<li><a href="#" class="logo"></a></li>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">行业中间件</a></li>
+				<li><a href="#">新闻中心</a></li>
+				<li><a href="#">技术专栏</a></li>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">中美AI青年计划</a></li>
+			</ul>
+	</div>
+	<div class="background">
+		<div class="cover-text">
+			<p id="t1">手机/loT-AI-Mobile/loT</p>
+		</div>
+	</div>
+	<div class="technology">
+		<div>
+			<p>手机大脑</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div class="content">
+			<p>手机厂商 + 云脑 = 让手机更贴近用户习惯</p>
+			<p>云脑科技基于手机端丰富的多维数据，利用Deep & Cross Learning和独有的BrainSync技术，在严格保护用户隐私的前提下，实现个性化的智能推荐和应用服务，提升用户体验和更个性化服务，进而提升品牌粘性和运营变现效率。</p>
+		</div>
+	</div>
+	<div class="problems">
+		<div>
+			<p>解决的问题</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div class="content_problems">
+			<div>
+				<p>硬件同质化</p>
+				<p>应用跨平台，导致用户迁移成本低，无品牌忠诚度</p>
+				<p>已解决</p>
+			</div>
+			<div>
+				<p>运营同质化</p>
+				<p>流量运营同质化，手机平台无法更好的为应用赋能，帮助应用更好的捕获用户时间，提升生态的变现效率</p>
+				<p>已解决</p>
+			</div>
+		</div>
+	</div>
+	<div class="superiority">
+		<div>
+			<p>我们的优势</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div class="content_sup">
+			<img src="img/mobile1.png" alt="">
+			<div>
+				<div></div>
+				<p>独创的BrainSync技术，在严格保护用户隐私数据的同时，充分挖掘数据价值;</p>
+				<div></div>
+				<p>创造性的提出了针对端设备上数据分布不均的端云协同方案，更适合碎片化分布式机器学习;</p>
+				<div></div>
+				<p>通过多维数据的融合处理，打破不同终端设备、不同应用间的数据孤岛。</p>
+			</div>
+		</div>
+	</div>
+	<div class="value">
+		<div>
+			<p>我们的价值</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div class="content_value">
+			<div>
+				<img src="img/m-v-1.png">
+				<p>应用服务个性化，为用户提供智能交互，提升用户留存和用户停留时间</p>
+			</div>
+			<div>
+				<img src="img/m-v-2.png">
+				<p>应用服务个性化，为用户提供智能交互，提升用户留存和用户停留时间</p>
+			</div>
+			<div>
+				<img src="img/m-v-3.png">
+				<p>应用服务个性化，为用户提供智能交互，提升用户留存和用户停留时间</p>
+			</div>
+		</div>
+	</div>
+	<div class="scheme">
+		<div>
+			<p>解决方案示意图</p>
+			<img src="img/seperator-circle.png">
+		</div>
+		<div>
+			<div class="before">
+				<div class="title">
+					<div></div>
+					<p>之前</p>
+				</div>	
+			</div>
+			<div class="after">
+				<div class="title">
+					<div></div>
+					<p>现在</p>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

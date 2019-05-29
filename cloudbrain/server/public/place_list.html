@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body onload="getlist()">
+	<input type="text" id="pname" placeholder="请输入部门名称">
+	<button onclick="insert()">插入</button><br>
+  <table border="1px">
+		<thead>
+			<tr>
+				<th>部门编号</th>
+				<th>部门名称</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="tb">
+		</tbody>
+	</table>
+	<script>
+		function getlist(){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					var arr = JSON.parse(result);
+					tb.innerHTML="";
+					console.log(arr);
+					for(var key in arr){
+						tb.innerHTML += "<tr><td>"+ arr[key].pid +"</td><td>"+ arr[key].pname +"</td><td><a href='javascript:del("+arr[key].pid+")'>删除</a><a href='place_update.html?pid=" +arr[key].pid+ "'>修改</a></td></tr>"
+					}
+				}
+			}
+			xhr.open("get","/place/list",true); 
+			xhr.send(null);
+		}
+		function del(pid){
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					if(result == 1){
+						alert("删除成功");
+						getlist();
+					}else{
+						alert("删除失败");
+					}
+				}
+			}
+			xhr.open("get","/place/del?pid="+pid,true);
+			xhr.send(null);
+		}
+		function insert(){
+			var $pname = pname.value;
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText;
+					if(result == 1){
+						alert("插入成功");
+						getlist();
+					}else{
+						alert("插入失败");
+					}
+				}
+			}
+			xhr.open("post","/place/insert",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var dataform = "pname="+$pname;
+			xhr.send(dataform);
+		}
+	</script>
+ </body>
+</html>
