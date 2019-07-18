@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 设置视口-->
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!-- 导入css-->
+    <link rel="stylesheet" href="../../../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/comm.css"/>
+    <link rel="stylesheet" href="css/job.css"/>
+    
+    <!-- 导入3个js 有顺序要求-->
+    <script src="../../../../js/jquery.min.js"></script>
+    <script src="../../../../js/popper.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/header.js"></script>
+</head>
+<body>
+<div class="container-fluid p-0">
+    <div id="header"></div>
+    <div class="img-group">
+        <img src="img/inner-banner.jpg" width="100%" alt=""/>
+        <div class="img-tip">加入我们</div>
+    </div>
+    <div class="job pb-2 pb-md-5 mb-2 mb-md-5">
+        <div class="title">
+            <p class="title_font">人才招聘</p>
+            <img class="title_img" src="img/seperator-circle.png">
+            <a href="#" class="card-link pt-lg-4">投递邮箱：job@cloudbrain.ai</a>
+        </div>
+        <div class="job_list">
+            <div class="options" id="options">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="javascript:;" class="btn btn-outline-primary px-4">中国</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="javascript:;" class="btn btn-outline-primary px-4">美国</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="parent" id="parent">
+                <div class="list_parent" id="list_parent_C">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#oneC" data-toggle="collapse" class="card-link d-block w-100">
+                                1）全栈工程师
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="oneC" class="collapse" data-parent="#list_parent_C">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#twoC" data-toggle="collapse" class="card-link d-block w-100">
+                                2）高级前端开发工程师
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="twoC" class="collapse" data-parent="#list_parent_C">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#threeC" data-toggle="collapse" class="card-link d-block w-100">
+                                3）大数据工程师
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="threeC" class="collapse" data-parent="#list_parent_C">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#fourC" data-toggle="collapse" class="card-link d-block w-100">
+                                4）数据分析师
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="fourC" class="collapse" data-parent="#list_parent_C">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_parent" id="list_parent_A" style="display: none">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#one" data-toggle="collapse" class="card-link d-block w-100">
+                                1）全栈工程师（美）
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="one" class="collapse" data-parent="#list_parent_A">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#two" data-toggle="collapse" class="card-link d-block w-100">
+                                2）高级前端开发工程师（美）
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="two" class="collapse" data-parent="#list_parent_A">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#three" data-toggle="collapse" class="card-link d-block w-100">
+                                3）大数据工程师（美）
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="three" class="collapse" data-parent="#list_parent_A">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="#four" data-toggle="collapse" class="card-link d-block w-100">
+                                4）数据分析师（美）
+                                <span class="close text-primary">∨</span>
+                            </a>
+                        </div>
+                        <div id="four" class="collapse" data-parent="#list_parent_A">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, solutaLorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, soluta
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    (function(){
+        //选项
+        var options = document.getElementById("options");
+        var btnC = options.querySelector("a:nth-child(1)");
+        var btnA = options.querySelector("li:nth-child(2)>a");
+        var listC = document.getElementById("list_parent_C");
+        var listA = document.getElementById("list_parent_A");
+        btnC.onclick=function(){
+            listC.style.display="block";
+            listA.style.display="none";
+        }
+        btnA.onclick=function(){
+            listC.style.display="none";
+            listA.style.display="block";
+        }
+        //console.log(btnA,btnC);
+
+        //中国区
+        var list_parent = document.getElementById("parent");
+        var card_link = list_parent.querySelectorAll("a");
+        for(var elem of card_link){
+            elem.onclick = function(){
+                var btn = this;
+                var span = btn.children[0];
+                if(span.textContent=="∨"){
+                    var down = list_parent.querySelectorAll("span");
+                    for(var elem of down){
+                        if(elem.textContent=="∧")
+                            elem.textContent="∨";
+                    }
+                    span.textContent="∧";
+                }else{
+                    span.textContent="∨"
+                }
+            }
+        }
+    })()
+
+</script>
+<footer>
+    <iframe src="footer.html" frameborder="0" scrolling="no" width="100%" class="footer"></iframe>
+</footer>
+</body>
+</html>
